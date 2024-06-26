@@ -6,7 +6,7 @@ if ! command -v zsh >/dev/null 2>&1; then
 fi
 
 # Install Oh My Zsh
-echo "Y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
 # Change the default shell to zsh
