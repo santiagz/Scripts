@@ -8,12 +8,12 @@ fi
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Set a custom theme (example with 'duellj')
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="duellj"/' ~/.zshrc
 
 # Change the default shell to zsh
 sudo chsh -s $(which zsh) $(whoami)
 
-# Set a custom theme (example with 'duellj')
-sed -i 's/ZSH_THEME=".*"/ZSH_THEME="duellj"/' ~/.zshrc
 
 # Clone zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
