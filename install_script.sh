@@ -22,15 +22,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Add zsh-autosuggestions to the list of plugins
 sed -i 's/plugins=(/&zsh-autosuggestions /' ~/.zshrc
 
-# Setup SSH Banner
-sudo bash -c 'cat > /etc/motd << "EOF"
-   ___________   __  _____                 
-  / __/_  __/ | / / / ___/______  __ _____ 
- _\ \  / /  | |/ / / (_ / __/ _ \/ // / _ \
-/___/ /_/   |___/  \___/_/  \___/\_,_/ .__/
-                                    /_/    
-
-EOF'
-
 # Source the .zshrc to apply changes
 source ~/.zshrc
