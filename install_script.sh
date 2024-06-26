@@ -6,9 +6,8 @@ if ! command -v zsh >/dev/null 2>&1; then
 fi
 
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-exit
 
 # Change the default shell to zsh
 sudo chsh -s $(which zsh) $(whoami)
