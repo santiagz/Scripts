@@ -14,6 +14,12 @@ sudo chsh -s $(which zsh) $(whoami)
 # Set a custom theme (example with 'duellj')
 sed -i 's/ZSH_THEME=".*"/ZSH_THEME="duellj"/' ~/.zshrc
 
+# Clone zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Add zsh-autosuggestions to the list of plugins
+sed -i 's/plugins=(/&zsh-autosuggestions /' ~/.zshrc
+
 # Setup SSH Banner
 sudo bash -c 'cat > /etc/motd << "EOF"
              ________________________________________________
